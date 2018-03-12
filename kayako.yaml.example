@@ -1,4 +1,4 @@
 ---
   url: "https://kayako.example.com/api/index.php"
   api_key: ""
-  api_secret: ""
+  secret_key: ""

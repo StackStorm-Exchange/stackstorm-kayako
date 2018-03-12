@@ -1,19 +1,28 @@
-# StackStorm Exchange Incubator
+# Kayako Integration Pack
 
-### What is this?
+This pack provides actions for integation with the [Kayako](https://www.kayako.com) customer ticket management system.
 
-This repository is a very special place where user-submitted packs get reviewed, perfected, approved, and finally transferred to the Exchange.
+## Configuration
 
-If you want to submit your pack, it's simple! **Fork this repo, create a subdirectory with your pack, and open a Pull Request.** We'll take it from here. Even if your pack is work-in-progress, you can still submit it to get advice and early feedback from our engineers! Or ping us [on Slack](https://stackstorm.com/community-signup), which is generally the best place to get advice from the StackStorm Community.
+Copy the example configuration in [kayako.yaml.example](./kayako.yaml.example)
+to `/opt/stackstorm/configs/kayako.yaml` and edit as required.
 
-Before you submit a pack, make sure to read the [Create and Contribute a Pack](https://docs.stackstorm.com/reference/packs.html) section of our documentation.
+It must contain:
 
-Here's N.E.P.T.R. the StackStorm Exchange Governor, giving you a thumbs-up:
+* ``url`` - URL for your Kayako API, e.g. https://kayako.example.com/api/index.php
+* ``api_key`` - An API token generated in the admin interface
+* ``secret_key`` - Secret key used for signature
 
-![](http://i.imgur.com/3bqVAh0.gif)
+To obtain API and Secret keys, see the docs [here](https://kayako.atlassian.net/wiki/spaces/DEV/pages/4817002/Kayako+REST+API#KayakoRESTAPI-Authentication)
 
-## Contributors License Agreement
+You can also use dynamic values from the datastore. See the
+[docs](https://docs.stackstorm.com/reference/pack_configs.html) for more info.
 
-By contributing you agree that these contributions are your own (or approved by your employer) and
-you grant a full, complete, irrevocable copyright license to all users and developers of the
-project, present and future, pursuant to the license of the project.
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
+
+## Actions
+
+* ``create_ticket`` - Creates a new ticket with the given subject and description.
+* ``create_ticket_post`` - Adds a post to a ticket

@@ -1,0 +1,16 @@
+---
+  url:
+    description: "URL of the Kayako system"
+    type: "string"
+    secret: false
+    required: true
+  api_key:
+    description: "API key used for Kayako authentication"
+    type: "string"
+    secret: true
+    required: true
+  secret_key:
+    description: "Secret used for request signature"
+    type: "string"
+    secret: true
+    required: true

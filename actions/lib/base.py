@@ -1,10 +1,9 @@
-import uuid
-
 import kayako
 
 __all__ = [
     'BaseKayakoAction'
 ]
+
 
 class Action(object):
     def __init__(self, config):

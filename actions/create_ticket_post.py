@@ -5,6 +5,7 @@ __all__ = [
     'CreateKayakoIssueAction'
 ]
 
+
 class CreateKayakoIssueAction(BaseKayakoAction):
 
     def run(self, ticket_id, contents, staff_email):

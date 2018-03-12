@@ -1,7 +1,7 @@
 ---
 ref: kayako
 name: Kayako
-description: Pack containing integration with Kayako
+description: Kayako customer ticket management
 keywords:
         - tickets
         - ticket management
