@@ -3,8 +3,8 @@ ref: kayako
 name: Kayako
 description: Kayako customer ticket management
 keywords:
-        - tickets
-        - ticket management
+  - tickets
+  - ticket management
 version: 0.1.0
 author: Antagonist B.V.
 email: info@antagonist.nl
