@@ -9,5 +9,5 @@ version: 0.1.0
 author: Antagonist B.V.
 email: info@antagonist.nl
 python_versions:
+  # kayako does not support python3
   - "2"
-  - "3"
