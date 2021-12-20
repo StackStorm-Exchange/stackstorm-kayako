@@ -1,6 +1,6 @@
 import uuid
 from lib.base import BaseKayakoAction
-import kayako
+import kayako  # pylint: disable=no-member
 
 __all__ = [
     'CreateKayakoIssueAction'
